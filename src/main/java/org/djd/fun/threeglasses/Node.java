@@ -5,6 +5,9 @@ import java.util.List;
 
 public class Node {
 
+  
+   
+
    final static int MAX_FIRST = 8;
    final static int MAX_SECOND = 5;
    final static int MAX_THIRD = 3;
@@ -65,7 +68,7 @@ public class Node {
       }
    }
    
-   private boolean isSame(Node node) {
+   public boolean isSame(Node node) {
       boolean sameNode = true;
       sameNode &= this.first == node.first;
       sameNode &= this.second == node.second;
@@ -138,6 +141,11 @@ public class Node {
          child = new Node(this, first, second + moveAmount, third - moveAmount);
       }
       return child;
+   }
+   
+   @Override
+   public String toString() {
+      return String.format("Node [first=%s, second=%s, third=%s]", first, second, third);
    }
 
 }

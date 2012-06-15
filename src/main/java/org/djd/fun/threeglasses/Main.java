@@ -7,5 +7,7 @@ public class Main {
       Node root = new Node(null, 8, 0, 0);
       TreeCreator treeCreator = new TreeCreator(root);
       treeCreator.create();
+      treeCreator.traverse();
+      
    }
 }

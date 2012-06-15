@@ -25,8 +25,19 @@ public class NodeAddChildTest {
       Assert.assertEquals(0, node.children.size());
 
    }
-   
-   
+
+   @Test
+   public void addChild_800child800_ChildNotAdded() {
+      Node node = new Node(null, 8, 0, 0);
+      Node child = new Node(node, 8, 0, 0);
+      node.addChild(child);
+      Assert.assertEquals(0, node.children.size());
+   }
+
+   /**
+    * grandChild status is same as ancestor's thus node will not have grandChild
+    * but it's own child.
+    */
    @Test
    public void addChild_800child350child800_grandChildNotAdded() {
       Node node = new Node(null, 8, 0, 0);
